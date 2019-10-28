@@ -1,4 +1,4 @@
-const Address = require("../models/Address");
+const Product = require("../models/Product");
 const Company = require("../models/Company");
 
 module.exports = {
@@ -6,7 +6,7 @@ module.exports = {
     const { company_id } = req.params;
 
     const company = await Company.findByPk(company_id, {
-      include: { association: "address" }
+      include: { association: "products" }
     });
 
     return res.json(company);
@@ -14,20 +14,20 @@ module.exports = {
 
   async store(req, res) {
     const { company_id } = req.params;
-    const { street, number, district, zipcode } = req.body;
+    const { name, category, description, price } = req.body;
 
     const company = Company.findByPk(company_id);
 
     if (!company) return res.status(400).json({ error: "Company not found" });
 
-    const address = await Address.create({
-      street,
-      number,
-      district,
-      zipcode,
+    const product = await Product.create({
+      name,
+      category,
+      description,
+      price,
       company_id
     });
 
-    return res.json(address);
+    return res.json(product);
   }
 };
