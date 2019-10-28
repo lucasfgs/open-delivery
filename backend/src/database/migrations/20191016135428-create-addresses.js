@@ -9,20 +9,26 @@ module.exports = {
         autoIncrement: true,
         allowNull: false
       },
+      company_id: {
+        type: Sequelize.INTEGER,
+        allowNull: false,
+        references: { model: "companies", key: "id" },
+        onUpdate: "CASCADE",
+        onDelete: "CASCADE"
+      },
+      zipcode: {
+        type: Sequelize.STRING,
+        allowNull: false
+      },
+      district: {
+        type: Sequelize.STRING
+      },
       street: {
         type: Sequelize.STRING,
         allowNull: false
       },
       number: {
-        type: Sequelize.STRING,
-        allowNull: false
-      },
-      district: {
-        type: Sequelize.STRING,
-        allowNull: false
-      },
-      zipcode: {
-        type: Sequelize.STRING,
+        type: Sequelize.INTEGER,
         allowNull: false
       },
       created_at: {
@@ -37,6 +43,6 @@ module.exports = {
   },
 
   down: (queryInterface, Sequelize) => {
-    return queryInterface.dropTable("companies");
+    return queryInterface.dropTable("addresses");
   }
 };

@@ -5,9 +5,7 @@ class Company extends Model {
     super.init(
       {
         name: DataTypes.STRING,
-        email: DataTypes.STRING,
-        password: DataTypes.STRING,
-        telephone: DataTypes.STRING
+        email: DataTypes.STRING
       },
       {
         sequelize

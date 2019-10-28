@@ -1,11 +1,11 @@
-const express = require("express");
+const express = require('express');
+const routes = require('./routes');
+
+require('./database');
+
 const app = express();
-
-require("./database");
-
-const routes = require("./routes");
 
 app.use(express.json());
 app.use(routes);
 
-app.listen(5000);
+app.listen(3333);
