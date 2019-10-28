@@ -1,13 +1,12 @@
 const { Model, DataTypes } = require("sequelize");
 
-class Product extends Model {
+class Customer extends Model {
   static init(sequelize) {
     super.init(
       {
         name: DataTypes.STRING,
-        category: DataTypes.STRING,
-        description: DataTypes.STRING,
-        price: DataTypes.DECIMAL
+        email: DataTypes.STRING,
+        password: DataTypes.STRING
       },
       {
         sequelize
@@ -16,13 +15,12 @@ class Product extends Model {
   }
 
   static associate(models) {
-    this.belongsTo(models.Company, { foreignKey: "company_id", as: "company" });
     this.belongsToMany(models.Product, {
-      foreignKey: "product_id",
+      foreignKey: "customer_id",
       through: "customer_products",
-      as: "customers"
+      as: "products"
     });
   }
 }
 
-module.exports = Product;
+module.exports = Customer;
