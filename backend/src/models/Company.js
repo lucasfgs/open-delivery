@@ -5,12 +5,19 @@ class Company extends Model {
     super.init(
       {
         name: DataTypes.STRING,
-        email: DataTypes.STRING
+        email: DataTypes.STRING,
+        password: DataTypes.STRING,
+        telephone: DataTypes.STRING
       },
       {
         sequelize
       }
     );
+  }
+
+  static associate(models) {
+    this.hasOne(models.Address, { foreignKey: "company_id", as: "address" });
+    this.hasMany(models.Product, { foreignKey: "company_id", as: "products" });
   }
 }
 
