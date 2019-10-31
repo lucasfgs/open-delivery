@@ -1,6 +1,7 @@
 import React from "react";
 
 import { Container, Header, Main } from "./styles";
+import { Link } from "react-router-dom";
 
 import logo from "../../assets/logo.png";
 import { MdMyLocation } from "react-icons/md";
@@ -14,9 +15,11 @@ export default function Home() {
           <a href="/#" className="btn btn--sign-up">
             Cadastre seu restaurante
           </a>
-          <a href="/#" className="btn btn--sign-in">
-            Entrar
-          </a>
+          <Link to="/login">
+            <a href="/#" className="btn btn--sign-in">
+              Entrar
+            </a>
+          </Link>
         </div>
         <div className="landing-title">
           <h1>Delivery de comida nunca foi tão fácil</h1>
