@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+import bg1 from "../../assets/bg1.jpg";
+
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
@@ -8,9 +10,40 @@ export const Container = styled.div`
 export const Header = styled.div`
   width: 100%;
   height: 100vh;
-  background: #f5f3f4;
   display: flex;
   flex-direction: column;
+
+  .landing-bg {
+    background: url(${bg1}) top left;
+    background-color: #f4f4f4;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: 50ms;
+  }
+
+  .landing-bg--left {
+    width: 500px;
+    height: 500px;
+    display: block;
+    position: absolute;
+    z-index: -1;
+    left: -20vh;
+    top: 260px;
+  }
+
+  .landing-bg--right {
+    width: 751px;
+    height: 600px;
+    display: block;
+    position: absolute;
+    right: -47vh;
+    z-index: -1;
+  }
 
   img {
     width: 100px;
