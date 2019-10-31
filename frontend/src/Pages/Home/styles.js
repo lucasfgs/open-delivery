@@ -9,35 +9,39 @@ export const Header = styled.div`
   width: 100%;
   height: 100vh;
   background: #f5f3f4;
+  display: flex;
+  flex-direction: column;
 
-  .login-menu {
+  img {
+    width: 100px;
+    height: 50px;
+    position: absolute;
+    top: 75px;
+    left: calc(50% - 50px);
+  }
+  .btn {
+    background: transparent;
+    text-decoration: none;
+    color: #ea1d2c;
+    border: none;
+    padding: 0 20px;
+    border-radius: 4px;
+    margin: 3px 0;
+    height: 50px;
+    font-weight: bold;
+    transition: 100ms;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .landing-login-menu {
     width: 100%;
     display: flex;
     justify-content: flex-end;
     margin-top: 50px;
-
-    img {
-      justify-self: center;
-      width: 100px;
-      height: 50px;
-    }
-    .btn {
-      background: transparent;
-      text-decoration: none;
-      color: #ea1d2c;
-      border: none;
-      padding: 0 20px;
-      border-radius: 4px;
-      margin: 3px 0;
-      height: 50px;
-      font-weight: bold;
-      transition: 100ms;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
-      overflow: hidden;
-    }
 
     .btn--sign-up {
       width: 200px;
@@ -58,6 +62,54 @@ export const Header = styled.div`
     .btn--sign-in:hover {
       background: #ea1d2c;
       color: #fff;
+    }
+  }
+
+  .landing-title {
+    text-align: center;
+    max-width: 640px;
+    margin: 0 auto;
+    margin-top: 190px;
+    color: #3e3e3e;
+    letter-spacing: -1px;
+
+    h1 {
+      font-size: 4.3125rem;
+      line-height: 4.9375rem;
+    }
+
+    h2 {
+      margin-top: -25px;
+      font-weight: 300;
+      font-size: 1.875rem;
+    }
+  }
+
+  .button-wrapper {
+    display: flex;
+    width: 100%;
+
+    .btn--search-restaurant {
+      display: flex;
+      justify-content: space-evenly;
+      padding: 0;
+      margin: 0 auto;
+      margin-top: 20px;
+      width: 100%;
+      max-width: 360px;
+      height: 60px;
+      background: #ea1d2c;
+      color: #fff;
+    }
+
+    .icon--search-restaurant {
+      font-size: 2rem;
+    }
+
+    span {
+      font-size: 1.5rem;
+
+      font-weight: 300;
     }
   }
 `;
