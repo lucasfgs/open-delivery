@@ -13,8 +13,8 @@ export default function Home() {
     <Container>
       <Header>
         <div className="landing-bg"></div>
-        <img src={bg2} alt="" className="landing-bg--right" />
-        <img src={bg3} alt="" className="landing-bg--left" />
+        <img src={bg2} alt="Background" className="landing-bg--right" />
+        <img src={bg3} alt="Background" className="landing-bg--left" />
         <img src={logo} alt="Brand" />
         <div className="landing-login-menu">
           <a href="/#" className="btn btn--sign-up">

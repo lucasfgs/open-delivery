@@ -7,4 +7,44 @@ body,
   box-sizing: border-box;
   font-family: "SulSans", Helvetica, sans-serif;
   height: 100%;
+  overflow: hidden;
+}
+
+.btn {
+  background: transparent;
+  text-decoration: none;
+  color: #fff;
+  border: none;
+  padding: 0 20px;
+  border-radius: 4px;
+  margin: 3px 0;
+  height: 50px;
+  font-weight: bold;
+  transition: 100ms;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+input {
+  text-rendering: auto;
+  color: initial;
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-transform: none;
+  text-indent: 0px;
+  text-shadow: none;
+  display: inline-block;
+  text-align: start;
+  background-color: white;
+  cursor: text;
+  margin: 0em;
+  font: 400 13.3333px Arial;
+  padding: 1px 0px;
+  border-width: 2px;
+  border-style: inset;
+  border-color: initial;
+  border-image: initial;
 }

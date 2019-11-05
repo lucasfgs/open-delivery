@@ -28,24 +28,6 @@ export const Container = styled.div`
     margin-bottom: 30px;
   }
 
-  .btn {
-    background: transparent;
-    text-decoration: none;
-    color: #fff;
-    border: none;
-    padding: 0 20px;
-    border-radius: 4px;
-    margin: 3px 0;
-    height: 50px;
-    font-weight: bold;
-    transition: 100ms;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    overflow: hidden;
-  }
-
   .sign-actions {
     display: flex;
     flex-direction: column;
@@ -61,9 +43,14 @@ export const Container = styled.div`
       background: #4065b4;
       margin-bottom: 20px;
     }
-
+    .btn-facebook:hover {
+      background: #33508e;
+    }
     .btn-email {
       background: #ea1d2c;
+    }
+    .btn-email:hover {
+      background: #c40d19;
     }
   }
 `;

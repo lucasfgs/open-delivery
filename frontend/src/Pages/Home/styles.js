@@ -8,7 +8,7 @@ export const Container = styled.div`
 `;
 
 export const Header = styled.div`
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -41,7 +41,7 @@ export const Header = styled.div`
     height: 600px;
     display: block;
     position: absolute;
-    right: -47vh;
+    left: 140vh;
     z-index: -1;
   }
 
@@ -127,7 +127,7 @@ export const Header = styled.div`
       justify-content: space-evenly;
       padding: 0;
       margin: 0 auto;
-      margin-top: 20px;
+      margin-top: 18px;
       width: 100%;
       max-width: 360px;
       height: 60px;
