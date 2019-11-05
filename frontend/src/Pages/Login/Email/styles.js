@@ -54,5 +54,10 @@ export const Container = styled.div`
     position: relative;
     top: 1px;
     text-align: center;
+    cursor: pointer;
+  }
+
+  .form--btn:hover {
+    background: #c40d19;
   }
 `;
