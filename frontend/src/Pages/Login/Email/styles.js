@@ -40,10 +40,11 @@ export const Container = styled.div`
     padding: 13px 20px;
     height: auto;
     line-height: 20px;
+    margin-bottom: 15px;
   }
 
   .form--btn {
-    margin-top: 45px;
+    margin-top: 30px;
     background: #ea1d2c;
     color: #fff;
     font-weight: bold;
