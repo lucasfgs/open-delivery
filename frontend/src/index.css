@@ -47,4 +47,5 @@ input {
   border-style: inset;
   border-color: initial;
   border-image: initial;
+  outline: none;
 }
