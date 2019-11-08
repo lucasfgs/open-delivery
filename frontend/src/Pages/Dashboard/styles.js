@@ -140,6 +140,17 @@ export const HeaderLinks = styled.div`
   }
 `;
 
-export const Category = styled.div`
+export const Main = styled.div`
   padding: 0 30px;
+
+  .list__title {
+    font-size: 1.125rem;
+    color: #414143;
+    line-height: 1;
+    font-weight: bold;
+    padding: 30px 0;
+    display: inline-block;
+    width: 100%;
+    margin: 0;
+  }
 `;

@@ -5,6 +5,7 @@ import { TiLocationOutline } from "react-icons/ti";
 import { MdKeyboardArrowDown } from "react-icons/md";
 
 import CategoryList from "../../components/CategoryList";
+import RestaurantList from "../../components/RestaurantList";
 
 import {
   Container,
@@ -12,7 +13,7 @@ import {
   HeaderSearch,
   HeaderDelivery,
   HeaderLinks,
-  Category
+  Main
 } from "./styles";
 import logo from "../../assets/logo.png";
 
@@ -55,10 +56,12 @@ export default function Dashboard() {
           </a>
         </HeaderLinks>
       </Header>
-      <Category>
-        <h3 className="category__title">Categorias</h3>
+      <Main>
+        <h3 className="list__title">Categorias</h3>
         <CategoryList />
-      </Category>
+        <h3 className="list__title">Restaurantes</h3>
+        <RestaurantList />
+      </Main>
     </Container>
   );
 }
