@@ -4,12 +4,15 @@ import { FiSearch, FiLogOut, FiShoppingBag } from "react-icons/fi";
 import { TiLocationOutline } from "react-icons/ti";
 import { MdKeyboardArrowDown } from "react-icons/md";
 
+import CategoryList from "../../components/CategoryList";
+
 import {
   Container,
   Header,
   HeaderSearch,
   HeaderDelivery,
-  HeaderLinks
+  HeaderLinks,
+  Category
 } from "./styles";
 import logo from "../../assets/logo.png";
 
@@ -52,6 +55,10 @@ export default function Dashboard() {
           </a>
         </HeaderLinks>
       </Header>
+      <Category>
+        <h3 className="category__title">Categorias</h3>
+        <CategoryList />
+      </Category>
     </Container>
   );
 }

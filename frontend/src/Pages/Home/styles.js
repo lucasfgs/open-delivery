@@ -5,11 +5,12 @@ import bg1 from "../../assets/bg1.jpg";
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 `;
 
 export const Header = styled.div`
   width: 100vw;
-  height: 100vh;
+  max-height: 50vh;
   display: flex;
   flex-direction: column;
 

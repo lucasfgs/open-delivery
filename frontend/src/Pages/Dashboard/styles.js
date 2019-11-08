@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
-export const Container = styled.div``;
+export const Container = styled.div`
+  overflow-x: hidden;
+`;
 
 export const Header = styled.div`
   width: 100%;
@@ -136,4 +138,8 @@ export const HeaderLinks = styled.div`
     height: 23px;
     margin-right: 10px;
   }
+`;
+
+export const Category = styled.div`
+  padding: 0 30px;
 `;
