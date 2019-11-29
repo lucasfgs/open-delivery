@@ -1,8 +1,6 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
-  overflow-x: hidden;
-`;
+export const Container = styled.div``;
 
 export const Header = styled.div`
   width: 100%;
