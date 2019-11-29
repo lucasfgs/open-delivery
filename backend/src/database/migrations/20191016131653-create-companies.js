@@ -25,6 +25,14 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: false
       },
+      image_url: {
+        type: Sequelize.STRING,
+        allowNull: true
+      },
+      delivery_price: {
+        type: Sequelize.DECIMAL,
+        allowNull: false
+      },
       created_at: {
         type: Sequelize.DATE,
         allowNull: false
