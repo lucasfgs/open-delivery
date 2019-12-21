@@ -1,3 +1,4 @@
+const bcrypt = require("bcrypt");
 const Customer = require("../models/Customer");
 
 module.exports = {
@@ -7,10 +8,10 @@ module.exports = {
 
     if (!customer) res.json({ error: true, message: "User not found" });
 
-    if (password === customer.password) {
-      res.json({ id: customer.id });
-    } else {
-      res.json({ error: true, message: "User not found" });
-    }
+    const validPassword = await bcrypt.compare(password, customer.password);
+
+    validPassword
+      ? res.json({ id: customer.id })
+      : res.json({ error: true, message: "User not found" });
   }
 };
