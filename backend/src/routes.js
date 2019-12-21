@@ -5,6 +5,7 @@ const AddressController = require("./controllers/AddressController");
 const ProductController = require("./controllers/ProductController");
 const CustomerController = require("./controllers/CustomerController");
 const CustomerOrderController = require("./controllers/CustomerOrderController");
+const AuthCustomerController = require("./controllers/AuthCustomerController");
 
 const routes = express.Router();
 
@@ -21,5 +22,7 @@ routes.get("/customers", CustomerController.index);
 routes.post("/customers", CustomerController.store);
 
 routes.post("/customers/:customer_id/products", CustomerOrderController.store);
+
+routes.post("/auth/customers", AuthCustomerController.show);
 
 module.exports = routes;
