@@ -46,7 +46,7 @@ export default function Signup() {
         <input
           className="form--input"
           type="password"
-          name="senha"
+          name="password"
           placeholder="Senha"
           onChange={handleChange}
         />
